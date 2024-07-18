@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 import os
 import datetime
+from distinct_outfits import execute_distinct_outfit
 
 def capture_outfits_from_video(video_path, output_folder, threshold=5000):
     cap = cv2.VideoCapture(video_path)
@@ -61,4 +62,10 @@ if __name__ == "__main__":
 
     end_time = datetime.datetime.now()
     diff = end_time - start_time
-    print(f"Time taken {diff}")
+    print(f"Time taken to extract frames from the given video: {diff}")
+
+    start_time = datetime.datetime.now()
+    execute_distinct_outfit
+    end_time = datetime.datetime.now()
+    diff = end_time - start_time
+    print(f"Time taken to extract distinct images: {diff}")
