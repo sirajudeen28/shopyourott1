@@ -1,2 +1,4 @@
 opencv-python
 google-cloud-vision
+scikit-image
+pillow
